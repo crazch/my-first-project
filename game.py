@@ -3,14 +3,12 @@ import random
 target = random.randint(1, 100)
 
 while True:
-  guess = input("Enter Number(1-100): ")
-  
   try:
-    guess = int(guess)
+    guess = int(input("Enter Number(1-100): "))
   except ValueError:
-    print("Invalid!")
-    continue
-  
+      print("Invalid!")
+      continue
+
   if guess > target:
     print("Too High")
   elif guess < target:
